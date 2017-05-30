@@ -1,0 +1,21 @@
+#list {
+  height: calc(100% - 56px);
+  margin: 0;
+  max-height: calc(100% - 56px);
+  overflow-y: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #list {
+    left: 0;
+    width: 400px;
+  }
+}
+
+.list-container {
+  height: 100%;
+  overflow-y: auto;
+}

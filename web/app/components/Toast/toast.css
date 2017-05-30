@@ -1,0 +1,45 @@
+#toast {
+  background-color: #323232;
+  bottom: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  color: #f1f1f1;
+  left: 20px;
+  max-width: calc(100% - 156px);
+  padding: 12px 20px;
+  position: fixed;
+  transform: translate3d(0, calc(100% + 25px), 0);
+  transition-duration: 0.2s;
+  will-change: transform;
+  z-index: 4;
+}
+
+#toast.opened {
+  animation-duration: 6s;
+  animation-name: toast-animation;
+}
+
+@media (min-width: 768px) {
+  #toast {
+    max-width: 244px;
+  }
+}
+
+#toast a {
+  color: #ec407a;
+  text-decoration: none;
+}
+
+@keyframes toast-animation {
+  0% {
+    transform: translate3d(0, calc(100% + 25px), 0);
+  }
+  3% {
+    transform: translate3d(0, 0%, 0)
+  }
+  97% {
+    transform: translate3d(0, 0%, 0)
+  }
+  100% {
+    transform: translate3d(0, calc(100% + 25px), 0);
+  }
+}

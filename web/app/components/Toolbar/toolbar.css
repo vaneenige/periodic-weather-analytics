@@ -1,0 +1,97 @@
+#toolbar {
+  -webkit-user-select: none;
+  background: #EC407A;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
+  color: white;
+  height: 56px;
+  left: 0;
+  line-height: 56px;
+  padding: 0px 20px;
+  position: relative;
+  top: 0;
+  user-select: none;
+  width: calc(100% - 40px);
+  z-index: 1;
+}
+
+#toolbar svg {
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+  margin-right: -20px;
+  padding: 16px 20px;
+}
+
+#toolbar .optional {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  #toolbar .optional {
+    display: inline-block;
+  }
+}
+
+#toolbar div {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  display: none;
+  float: right;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+#toolbar div:first-of-type {
+  padding-right: 0;
+}
+
+#toolbar .poweredBy {
+  line-height: 1.4em;
+  max-width: 120px;
+  padding-bottom: 10px;
+  padding-top: 8px;
+}
+#toolbar .poweredBy a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  #toolbar > svg {
+    display: none !important;
+  }
+  #toolbar > div {
+    display: block;
+  }
+}
+
+#toolbar a.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#toolbar a.disabled svg {
+  opacity: inherit;
+}
+
+#toolbar form {
+  color: white;
+  display: inline-block;
+  margin-left: 24px;
+}
+
+#toolbar form a {
+  color: white;
+  font-size: 14px;
+  margin-left: 6px;
+  text-decoration: none;
+}
+
+#toolbar form input {
+  border-radius: 6px;
+  border: none;
+  padding: 8px 12px;
+}
+
+#toolbar.sticky {
+  position: fixed;
+}

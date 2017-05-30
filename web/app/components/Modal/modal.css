@@ -1,0 +1,67 @@
+.modal-toggle {
+  background: #EC407A;
+  border-radius: 50%;
+  border: none;
+  bottom: 20px;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.12), 0 4px 4px 0 rgba(0,0,0,.24);
+  cursor: pointer;
+  height: 56px;
+  outline: none;
+  position: absolute;
+  right: 20px;
+  transform: scale3d(0, 0, 0);
+  transition-duration: .2s;
+  transition-property: transform;
+  width: 56px;
+  z-index: 1;
+}
+
+.modal-card {
+  -webkit-transform: translate3d(0, 100%, 0);
+  -webkit-user-select: none;
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  display: block;
+  left: 0;
+  max-width: 100%;
+  padding: 12px;
+  position: absolute;
+  transform: translate3d(0, 100%, 0);
+  transition-duration: .2s;
+  transition-property: visibility, -webkit-transform;
+  transition-property: visibility, transform;
+  user-select: none;
+  visibility: hidden;
+  width: calc(100% - 24px);
+  will-change: transform;
+  z-index: 3;
+}
+
+.modal-card.opened {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.modal-input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ccc;
+  color: #202020;
+  display: flex;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  margin: 8px;
+  outline: none;
+  padding: 8px 0;
+}
+
+.modal-close {
+  cursor: pointer;
+  display: flex;
+  padding: 16px 20px;
+  position: relative;
+}

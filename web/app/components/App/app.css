@@ -1,0 +1,82 @@
+html, body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+  color: #212121;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: 0;
+  line-height: 1.618em;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+.layout-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.circular, .loader {
+  height: 100px;
+  width: 100px
+}
+
+.loader {
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: .4s;
+  transition-property: opacity;
+  will-change: opacity;
+  z-index: 1;
+}
+
+.circular {
+  animation: loader-rotate 2s linear infinite;
+  position: relative
+}
+
+.path {
+  animation: loader-dash 1.5s ease-in-out infinite;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: #EC407A;
+}
+
+@keyframes loader-rotate {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes loader-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124
+  }
+}
+
+.no-js-shell {
+  padding-top: 56px;
+}
