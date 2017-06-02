@@ -49,11 +49,8 @@ const page = (offset, total, slice, filter) => `
         </a>
       </div>
       <ul id="list">
-        ${slice.map(({ name, temp, description, icon }) => `
+        ${slice.map(({ name, temp, description }) => `
           <li class="item">
-            <div class="item-avatar">
-              <img src="./app/assets/icons/${icon}.svg" alt="" />
-            </div>
             <div class="item-content">
               <div class="item-title">${name}</div>
               <div class="item-subtitle">${temp}℃, ${description}</div>

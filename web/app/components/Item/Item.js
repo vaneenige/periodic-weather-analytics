@@ -5,6 +5,7 @@ import { bindActions } from './../../util';
 import reduce from './../../reducers';
 import * as actions from './../../actions';
 
+import getIcon from './icon';
 import './item.css';
 
 @connect(reduce, bindActions(actions))
@@ -19,7 +20,7 @@ export default class Item extends Component {
   render = ({ item, network, serviceWorker }) => (
     <li className="item">
       <div className="item-avatar">
-        <img src={`./app/assets/icons/${item.icon}.svg`} alt="" />
+        {getIcon(item.icon)}
       </div>
       <div className="item-content">
         <div className="item-title">{item.name}</div>
